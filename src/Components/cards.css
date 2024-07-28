@@ -1,0 +1,45 @@
+.cards {
+    position: relative;
+    width: 350px;
+    height: 460px;
+    padding: 4px; /* Espaçamento ao redor da imagem */
+    margin: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+    overflow: hidden; /* Para garantir que a imagem não saia dos limites do card */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.cards:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Zoom leve para dar um efeito visual agradável */
+}
+
+.cards-imagem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o espaço do card */
+    z-index: 1;
+}
+
+.cards-corpo {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5); /* Fundo preto semitransparente para legibilidade */
+    padding: 20px;
+    border-radius: 5px; /* Bordas arredondadas para o conteúdo */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: white; /* Texto branco para contraste */
+}
+
+.cards-titulo, .cards-preco, .cards-descricao {
+    margin: 0;
+    padding: 5px 0;
+}
